@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Goal : MonoBehaviour
+public class Coin : MonoBehaviour
 {
     // Start is called before the first frame update
     void Start()
@@ -15,13 +15,11 @@ public class Goal : MonoBehaviour
     {
         
     }
-
     private void OnTriggerEnter(Collider other)
     {
-        if(other.gameObject.tag == "Player")
+        if (other.gameObject.tag == "Player")
         {
-            Debug.Log("ÉSÅ[Éã");
+            Destroy(gameObject);
         }
-        
     }
 }
